@@ -1,0 +1,449 @@
+
+.pb-96{
+  padding-bottom: 96px;
+}
+.product-nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid #494946;
+  background-color:#efebe2fb;
+  background-color: #e1dacc;
+  // box-shadow: 0px 2px 5px #ccc;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #494946;
+    bottom: 5px;
+    left: 0;
+  }
+  h1{
+    font-family: "Slackside One", cursive;
+    padding-bottom: 8px;
+    text-align: right;
+    margin-right: 80px;
+    font-size: 30px;
+  }
+  ul {
+    display: flex;
+    padding: 20px 20px;
+  }
+  li{
+    margin-right: 26px;
+    margin-left: 26px;
+  }
+  a {
+    text-decoration: none;
+    color: #9c9c9c;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Lora', serif;
+    display:block;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    &::after{
+        content: "";
+        position: absolute;
+        background-color: #AC6239;
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: -8px;
+        transition:all 0.4s ease-out;
+        
+    }
+    &:hover{
+        color: black;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+  }
+}
+// 人氣商品
+.sub-title3{
+  
+  h3{
+    font-size: 34px;
+    color: #c2a042;
+    font-family: 'Kaisei Opti', serif;
+    font-family: "Yusei Magic", sans-serif;
+    letter-spacing: 0.3rem;
+    
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 26px;
+    background-color: #F1EDE4;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 36px;
+      height: 2px;
+      background-color:#c2a042;
+      transform: translateX(-50%);
+    }
+  }
+}
+.popular-items-group{
+    background-color: #F1EDE4;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+.milkTeaBox{
+    position: relative;
+    
+    &::before{
+        content:"Milk Tea";
+        position: absolute;
+        top: 5%;
+        left: 0;
+        color: #c7b59f ;
+        writing-mode: vertical-rl;
+        font-size: 66px;
+        font-family: "Chonburi", serif;
+        
+    }
+    
+}
+.mangoTeaBox{
+  position: relative;
+  
+  &::before{
+      content:"Mango Tea";
+      position: absolute;
+      top: 5%;
+      right: 0;
+      color: #c7b59f ;
+      writing-mode: vertical-rl;
+      font-size: 66px;
+      font-family: "Chonburi", serif;
+  }
+}
+.jasmineTeaBox{
+  position: relative;
+  
+  &::before{
+      content:"Jasmine Tea";
+      position: absolute;
+      top: 5%;
+      left: 0;
+      color: #c7b59f ;
+      writing-mode: vertical-rl;
+      font-size: 66px;
+      font-family: "Chonburi", serif;
+
+  }
+  
+}
+.popularItem{
+    display: flex;
+    justify-content: space-between;
+    // border: red 1px solid;
+    img{
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+    .item-pic-top{
+        width: 30%;
+    }
+    .item-pic-bottom{
+        width: 25%;   
+    }
+    .item-text{
+        width: 40%;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 56px 32px;
+        h4{
+            font-family: "M PLUS Rounded 1c", sans-serif;
+            font-family: "Yusei Magic", sans-serif;
+            // font-family: "Murecho", sans-serif;
+            // font-family: "Slackside One", cursive;
+            font-size: 28px;
+            // background-color: #F1EDE4;
+            padding: 8px 14px;
+            
+        }
+        p{
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            color: #333;
+            padding: 44px 52px;
+            line-height: 1.7;
+            letter-spacing: 0.1rem;
+          }
+          
+    }
+}
+.milk-tea{
+  .item-pic-top{
+      width: 35%;
+      position: relative;
+      &::after{
+        content:"01";
+        position: absolute;
+        top: -40px;;
+        right: -36px;
+        color:rgba(196, 177, 149, 0.7);
+        color: rgba(219,204,149,0.7);
+        line-height: 1;
+        font-size: 76px;
+        font-family: "Chonburi", serif;
+  
+    }
+    img{
+        border: 10px solid #fff;
+      }   
+  }
+  .item-pic-bottom{
+      width: 25%;
+      align-self: center;
+      img{
+          border: 5px solid #fff;
+          border: 10px solid #e3d1bb;
+          transform: translate(-15%,28%);
+      }
+  }
+  .item-text{
+      background-color: #e3d1bb;
+      h4{
+        color: #CA9942;
+        color: #bb764c;
+       
+      }
+  }
+}
+.mango-tea{
+  flex-direction: row-reverse;
+  .item-pic-top{
+      width: 35%;
+      position: relative;
+      &::after{
+        content:"02";
+        position: absolute;
+        top: -60px;
+        left: -46px;
+        color:rgba(196, 177, 149, 0.7);
+        color: rgba(219,204,149,0.7);
+        font-size: 76px;
+        font-family: "Chonburi", serif;
+  
+     }
+      img{
+        border: 6px solid #fff;
+        
+      }   
+  }
+  .item-pic-bottom{
+      width: 25%;
+      align-self: center;
+      position: relative;
+      img{
+          border: 6px solid #fff;
+          transform: translate(15%,35%);
+      }
+  }
+  .item-text{
+    
+    background-color:#edda99fc;
+    background-color:#efe2b5;
+    // order: -1;
+      h4{
+        color: #bb541f;
+        color: #E48F45;
+      }
+      p{
+        color:#49462c;
+      }
+  }
+}
+.jasmine-tea{
+  justify-content: center;
+  // border: red 1px solid;
+  .item-pic-top{
+      width: 35%;
+      position: relative;
+      &::after{
+        content:"03";
+        position: absolute;
+        top: -40px;
+        right: -36px;
+        color:rgba(196, 177, 149, 0.7);
+        color: rgba(219,204,149,0.7);
+        font-size: 76px;
+        font-family: "Chonburi", serif;
+  
+     }
+      img{
+        border: 6px solid #D9D4CB;
+        // transform: translate(-25%,25%);
+        transform: translateY(24px);  
+      }   
+  }
+  .item-pic-bottom{
+      width: 25%;
+      order: 1;
+      align-self: start;
+      img{
+        border: 6px solid #fff;
+      }
+  }
+  .item-text{
+    
+      background-color: #acaca5;
+      background-color: #D9D4CB;
+      position: relative;
+      left: 36px;
+      top: 40px;
+      h4{
+        // color: #CA9942;
+        // color: #bb764c;
+        color: #8c8c98;
+      }
+  }
+}
+
+
+/* product 分頁 */
+.product-menu{
+    background-color: #f6eee0;
+    padding-bottom: 96px;
+  }
+
+.product-title{
+  padding-top: 64px ;
+  padding-bottom: 30px;
+  font-family: "Yusei Magic", sans-serif;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 36px;
+    height: 2px;
+    background-color:#b8422d;
+    transform: translateX(-50%);
+  }
+  h5{
+    font-size: 40px;
+    text-align: center;
+    // font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 400;
+    color: #b8422d;
+  }
+  p{
+    font-size: 20px;
+    color: #251919;
+    // font-family: 'Kaisei Opti', serif;w
+    text-align: center;
+    
+  }
+}
+  
+  
+  // 各商品
+  .product-category{
+    display: flex;
+    justify-content: space-around;
+    padding:100px 60px;
+    
+  }
+  
+  .tea-item{
+    width: 28%;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px #00000029;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0px);
+    transition: all .3s;
+    &:hover{
+      transform: translateY(-30px);
+    }
+    &:hover .tea-item-text{
+      color: #ffffff;
+      background-color: #251919;
+    }
+
+    .tea-item-pic{
+      object-fit: cover;
+      img{
+        width: 100%;
+        display: block;
+      }
+    }
+    .tea-item-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #333;
+      flex-grow: 1 ;
+
+      h6{
+        font-size: 14px;
+        font-weight: 500;
+        padding-bottom: 8px;
+        font-weight: 600;
+      }
+      
+    }
+  }
+  
+  
+
+  // footer
+  .product-footer {
+    border-top:1px solid #403c3c;
+    // border-bottom:1px solid #494946;
+    background-color: #e1dacc;
+    color: #494946;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+    p{
+      margin-top: 12px;
+      font-size: 12px;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #494946;
+      top: 5px;
+      left: 0;
+    }
+    .sns-link{
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      li+li{
+        margin-left: 24px;
+      }
+      a{
+       
+        color: #494946;
+        &:hover{
+          text-decoration: underline;
+          color: #9e9691;
+          
+        }
+      }
+    }
+  }

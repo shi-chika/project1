@@ -7,8 +7,8 @@
     <title>Cha Cha Tea</title>
    
     <!-- page icon -->
-    <link rel="shortcut icon" href="images/icon10.png">
-    <link rel="bookmark" href="images/icon10.png">
+    <link rel="shortcut icon" href="images/icon01.png">
+    <link rel="bookmark" href="images/icon01.png">
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -16,30 +16,72 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Lato:ital,wght@1,300;1,400;1,700&family=Lora:ital,wght@1,400;1,600;1,700&family=M+PLUS+Rounded+1c:wght@300;400;500&family=Noto+Sans+JP:wght@200;300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Slackside+One&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kaisei+Opti&family=Krona+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&family=Murecho:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP&family=Slackside+One&family=Yusei+Magic&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">      
      <!-- icons -->
      <script src="https://kit.fontawesome.com/2b34f8a7fa.js" crossorigin="anonymous"></script>
       <!-- css link -->
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="tea.css">
+    <link rel="stylesheet" href="css/all.css">
 
     
 </head>
 <body>
-    <header class="title"><h1>CHA CHA TEA</h1></header>
-    <nav class="nav">
+    
+    <nav class="product-nav">
       <ul>
         <li><a href="tea.html">Home</a></li>
         <li><a href="product.html">Product</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">Q&A</a></li>
       </ul>
+      <h1>CHA CHA TEA</h1>
     </nav>
     
+    <div class="sub-title3" ><h3>人気TOP3</h3></div>
+
+    <section class="popular-items-group milkTeaBox">
+      <div class=" container milk-tea popularItem">
+        <div class="item-pic-top" data-aos="fade-down-right"><img src="images/cha30.jpeg" alt="milk tea"></div>
+        <div class="item-pic-bottom" data-aos="fade-down-right" ><img src="images/cha31.jpeg" alt="milk tea"></div>
+        <div class="item-text " >
+          <h4>タピオカミルクティー</h4>
+          <p>タピオカを加えた人気のあるミルクティーです。 タピオカの食感と甘さがミルクティーと相まって、 楽しい飲み物になります。</p>
+          
+          
+        </div>
+
+      </div>
+    </section>
+    <section class="popular-items-group mangoTeaBox ">
+      <div class="container mango-tea popularItem">
+        <div class="item-pic-top" data-aos="fade-down-left"><img src="images/cha53.jpeg"  alt="mango tea"></div>
+        <div class="item-pic-bottom" data-aos="fade-down-left"><img src="images/cha39.jpeg"  alt="mango tea"></div>
+        <div class="item-text " >
+          <h4>マンゴーティ―</h4>
+          <p>新鮮なマンゴーの風味が豊かなフルーツティーです。 甘くてジューシーなマンゴーの味わいが特徴で、 爽やかなアイスティーとしてもお楽しみいただけます。</p>
+        </div>
+      </div>
+    </section>  
+    
+    <section class="popular-items-group jasmineTeaBox ">
+      <div class=" container jasmine-tea popularItem">
+        <div class="item-pic-top gray-border" data-aos="fade-down-right" ><img src="images/cha51.jpeg" alt="Jasmine tea"></div>
+        <div class="item-pic-bottom gray-border" ><img src="images/cha50.webp"  alt="mango tea"></div>
+        
+        <div class="item-text" >
+            <h4>ジャスミンティー</h4>
+            <p>茶葉とジャスミンの花を組み合わせて製造されるお茶で、
+              芳醇な香りと優雅な味わいが特徴です。
+              香り高いお茶として人気があります。</p>
+        </div>
+      </div>
+    </section>
+
+    
     <section class="product-menu">
-      <h5>Fruit Tea <br><span>フルーツティー</span></h5>
-      <div class="product-menu-icon">
-        <img src="images/line40.png" alt="">
+      <div class="product-title">
+        
+        <p>フルーツティー</p>
+        <h5>Fruit Tea</h5>
       </div>
       
       <div class="product-category container">
@@ -57,7 +99,6 @@
         <div class="tea-item-pic">
           <img src="images/cha15.webp"  width="300px" height="400px"  alt="">
         </div>
-          
           <div class="tea-item-text">
             <h6>シトラスブリーズティー</h6>
             <p>みずみずしい柑橘系フルーツのフレーバーに包まれた特別なブレンドです。</p>
@@ -75,11 +116,13 @@
         </div>
       </div>  
 
-
-      <h5 >Straight Tea  <br><span>ストレートティー</span> </h5>
-      <div class="product-menu-icon">
-        <img src="images/line40.png" alt="">
+      <div class="product-title">
+       
+        <p>ストレートティー</p>
+        <h5>Straight Tea</h5>
       </div>
+
+      
       <div class="product-category container">
         <div class="tea-item">
           <div class="tea-item-pic">
@@ -114,17 +157,15 @@
 
     </section>
     
-    <footer>
+    <footer class="product-footer">
       <div class="footer-text">
         <ul class="sns-link">
           <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook" ></i></a></li>
           <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram" ></i></a></li>
           <li><a href="https://developers.line.biz/ja/services/line-login/" target="_blank"><i class="fa-brands fa-line" ></i></a></li>
         </ul>
-        <p>Copyright © 2023 Cha Cha Tea All Rights Reserved.</p>
+        <p>Copyright © 2024 Cha Cha Tea All Rights Reserved.</p>
       </div>
-      
-    
     </footer>
 
 
