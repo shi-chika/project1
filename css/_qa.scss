@@ -1,5 +1,3 @@
-
-
 .qa-BC{
     background-color: #E4DEBE;
     min-height: 100vh;
@@ -7,110 +5,110 @@
     padding-bottom: 66px;
 }
 
-  .qa-container{
-    max-width:900px;
-    margin: 0 auto;
-    
-    padding-left: 15px;
-    padding-right: 15px;
-   
-  }
-  .qa-group{
-    background-color: #fff;
-    border-radius:10px;
-    padding: 64px 84px;
-    font-family: 'Noto Sans JP', 'Lato',sans-serif;
-    color: rgb(46, 44, 43)a2a;
-    text-align: justify;
-    @include tablets{
-       width: 80%; 
-       margin: 0 auto;
-       padding: 42px;
-    }
-    @include phones{
-        width: 90%;
-        padding:34px 22px;
-    }
-    p{
-        text-align: center;
-        font-size: 50px;
-        padding-bottom: 54px;
-        
-        color:#644a1b;
-        font-weight: 500;
-        font-family: "Chonburi", serif;
-        @include phones{
-            font-size: 36px;
-            padding-bottom: 38px;
-        }
-      }
-      li{
-        padding: 24px ;
-        padding-bottom: 0;
-        border:1px solid #cccccc;
-        border-radius:15px;
-        margin-bottom: 24px;
-        @include phones{
-            font-size: 15px;
-            padding: 0;
-            padding-top: 16px;
-            
-            
-        }
-      }
-      li:hover{
-         box-shadow: 0 0 5px #cccccc;
-      }
-      
-  }
+.qa-container{
+  max-width:900px;
+  margin: 0 auto;
   
-  .question{
-    padding-bottom: 24px;
-    position: relative;
-    padding-left: 16px;
-    padding-right: 16px;
-    cursor:pointer;
-    @include tablets{
-        padding-right: 62px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+}
+.qa-group{
+  background-color: #fff;
+  border-radius:10px;
+  padding: 64px 84px;
+  font-family: 'Noto Sans JP', 'Lato',sans-serif;
+  color: rgb(46, 44, 43)a2a;
+  text-align: justify;
+  @include tablets{
+      width: 80%; 
+      margin: 0 auto;
+      padding: 42px;
+  }
+  @include phones{
+      width: 90%;
+      padding:34px 22px;
+  }
+  p{
+      text-align: center;
+      font-size: 50px;
+      padding-bottom: 54px;
+      
+      color:#644a1b;
+      font-weight: 500;
+      font-family: "Chonburi", serif;
+      @include phones{
+          font-size: 36px;
+          padding-bottom: 38px;
+      }
     }
-    @include phones{
-        padding-right: 48px;
+    li{
+      padding: 24px ;
+      padding-bottom: 0;
+      border:1px solid #cccccc;
+      border-radius:15px;
+      margin-bottom: 24px;
+      @include phones{
+          font-size: 15px;
+          padding: 0;
+          padding-top: 16px;
+          
+          
+      }
     }
-  }
-  .question::after{
-    font: var(--fa-font-solid);
-    content: "\f0fe";
-    position: absolute;
-    right: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-bottom: 24px;
-    font-size: 24px;
-    color:#c4972f;
-    @include phones{
-        right: 12px;
-        padding-bottom: 12px;
+    li:hover{
+        box-shadow: 0 0 5px #cccccc;
     }
-  }
-  .minus::after{
-    font: var(--fa-font-regular);
-    content: "\f146";
-    font-size: 24px;
-  }
-  .answerClose{
-    padding-left: 16px;
-    padding-right: 16px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s ease-in-out;
-    color:#856120;
-    color: #666;
-  }
-  .open{
-    max-height: 200px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    border-top:1px solid #cccccc;
     
+}
+  
+.question{
+  padding-bottom: 24px;
+  position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
+  cursor:pointer;
+  @include tablets{
+      padding-right: 62px;
   }
+  @include phones{
+      padding-right: 48px;
+  }
+}
+.question::after{
+  font: var(--fa-font-solid);
+  content: "\f0fe";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-bottom: 24px;
+  font-size: 24px;
+  color:#c4972f;
+  @include phones{
+      right: 12px;
+      padding-bottom: 12px;
+  }
+}
+.minus::after{
+  font: var(--fa-font-regular);
+  content: "\f146";
+  font-size: 24px;
+}
+.answerClose{
+  padding-left: 16px;
+  padding-right: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  color:#856120;
+  color: #666;
+}
+.open{
+  max-height: 200px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top:1px solid #cccccc;
+  
+}
   
