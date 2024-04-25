@@ -7,7 +7,8 @@
   text-align: justify;
 }
 .container {
-  max-width:1128px;
+  // max-width:1128px;
+  max-width:1230px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -16,57 +17,8 @@
 
 
 
-.home-header {
-  background-color: #bc8c5e;
-  color: #fff;
-  h1{
-    font-family: 'Slackside One', cursive;
-    padding-bottom: 8px;
-    text-align: right;
-    margin-right: 80px;
-    font-size: 28px;
-  }
-}
 
-nav {
-  box-shadow: 0px 2px 5px #ccc;
-  ul {
-    display: flex;
-    padding: 14px 20px;
-  }
-  li{
-    margin-right: 26px;
-    margin-left: 26px;
-  }
-  a {
-    text-decoration: none;
-    color: #9c9c9c;
-    font-weight: bold;
-    font-size: 16px;
-    font-family: 'Lora', serif;
-    display:block;
-    position: relative;
-    padding-left: 10px;
-    padding-right: 10px;
-    &::after{
-        content: "";
-        position: absolute;
-        background-color: #AC6239;
-        height: 2px;
-        width: 0;
-        left: 0;
-        bottom: -5px;
-        transition:all 0.4s ease-out;
-        
-    }
-    &:hover{
-        color: black;
-    }
-    &:hover::after{
-        width: 100%;
-    }
-  }
-}
+
 
 .main {
   display: flex;
@@ -147,14 +99,13 @@ nav {
 }
 
 .tea-production {
-  
-  // background-color: #F1EDE4;
-  // background-color: #dcd3b2;
   background-image: url(/images/pexels-photo-03.webp);
   background-position: center ;
   background-size: cover ;
   background-repeat: no-repeat;
   position: relative;
+  
+  
   &::before{
     content: "";
     position: absolute;
@@ -162,7 +113,6 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:rgba(19, 17, 17, 0.3);
     background-color:rgba(255, 251, 251, 0.3);
 }
   
@@ -172,16 +122,29 @@ nav {
   justify-content:space-evenly;
   padding-top: 160px;
   padding-bottom: 160px;
+  
+  
+  @include phones{
+    flex-wrap: wrap;
+    padding-top: 98px;
+    padding-bottom: 60px;
+   
+  }
 }
 .method{
   width: 45%;
   position: relative;
   cursor: pointer;
+  @include phones{
+    width: 90%;
+    margin-bottom: 38px;
+  }
   img{
     width: 100%;
     height: auto;
     display: block;
   }
+
   .method-txt{
     position: absolute;
     top:0;
@@ -198,6 +161,12 @@ nav {
     opacity: 0;
     transition: all 0.6s ease;
     font-family: 'Zen Kaku Gothic New', sans-serif;
+    @include phones{
+      opacity: 1;
+      text-align: start;
+      background-color: rgba(109, 94, 94, 0.3);
+      text-shadow:  3px 3px 2px #312f2f;
+    }
   }
   &:hover .method-txt{
     opacity: 1;
@@ -205,6 +174,65 @@ nav {
   }
   
 }
+// 上質茶葉
+.leaf-group{
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+.sub-title2 h2{
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Kaisei Opti', serif;
+  color:#556B2F;
+  background-color: #fff;
+  @include phones{
+    font-size: 18px;
+    padding: 5px 0;
+  }
+}
+.leaf-text{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 48px 20px;
+  @include phones{
+    padding: 20px;
+  }
+  p{
+    font-family: 'Kaisei Opti', serif;
+    text-align: center;
+    flex: 1;
+    padding: 24px;
+    line-height: 2;
+    font-size: 18px;
+    @include phones{
+      font-size: 16px;
+      text-align: start;
+    }
+  }
+  .leaf-icon {
+    width: 8%;
+    
+    align-self: flex-start;
+    animation: rotation 5s infinite linear;
+    @include phones{
+      width: 10%;
+    }
+    img{
+      width: 100%;
+      vertical-align: middle;
+      object-fit: contain;
+      
+    }
+  }
+}
+
+/* leaf icon */
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+  to { transform: rotate(359deg);}
+}
+
+
 
 // new
 .home-background-color{
@@ -218,25 +246,38 @@ nav {
   padding-top: 180px;
   padding-bottom: 120px;
   
-  
+  @include phones{
+    padding-top: 120px;
+    padding-bottom: 70px;
+  }
   .t-drink-box{
     width: 90%;
     position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color:#d8c5a1;
     background-color: #fff;
     padding: 36px 46px;
     border-radius: 150px;
     margin: 0 auto;
+    @include phones{
+      flex-direction: column;
+      border-radius: 15px;
+      padding:52px 24px;
+    }
     
     .t-drink-title{
-      width: 400px;
-      height: 166px;
+      // width: 400px;
+      // height: 166px;
+      width: 40%;
       position: absolute;
       top:-20%;
       left:-5%;
+      @include phones{
+        width: 60%;
+        top: -10%;
+        left: 0;
+      }
       img{
         vertical-align: middle;
         width: 100%;
@@ -244,12 +285,19 @@ nav {
       }
     }
     .t-drink-illust{
-      width: 278px;
-      height: 150px;
+      width: 30%;
       position: absolute;
       bottom:-45%;
       left:15%;
       z-index: 2;
+      @include tablets{
+        width: 40%;
+      }
+      @include phones{
+        width: 60%;
+        bottom:-25%;
+        left:0;
+      }
       img{
         vertical-align: middle;
         width: 100%;
@@ -261,16 +309,29 @@ nav {
       width: 50%;  
       line-height: 2.5;
       font-family: "Zen Kaku Gothic New", sans-serif;
-      
       font-size: 18px;
+      @include tablets{
+        line-height: 2;
+      }
+      @include phones{
+        width: 80%;
+        margin-bottom: 24px;
+        font-size: 15px;
+      }
     }
     .t-drink-img{
       width: 28%;
+      @include phones{
+        width: 50%;
+      }
       img{
         vertical-align: middle;
         width: 100%;
         height: 100%;
         border-radius: 80px;
+        @include phones{
+          border-radius: 15px;
+        }
       }
     }
    
@@ -280,7 +341,6 @@ nav {
 // ! 分類2
 .taiwan-drink2{
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
- 
   background-color: #D6CC99;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -291,8 +351,12 @@ nav {
     left: 22%;
     bottom: 14%;
     font-size: 24px;
-    color: #bc8636;
     color: #AC6239;
+    @include phones{
+      
+      bottom: 8%;
+      font-size: 20px;
+    }
     
   }
 
@@ -302,10 +366,23 @@ nav {
   // border: red 1px solid;
   display: flex;
   justify-content: space-around;
+
+  @include phones{
+    flex-direction: column;
+    align-items: center;
+  }
   .t-drink-img{
     width: 30%;
     position: relative;
     
+    @include tablets{
+      width: 36%;
+      align-self: center;
+    }
+    @include phones{
+      width: 70%;
+      margin-bottom: 34px;
+    }
     &::before{
       content: "";
       position: absolute;
@@ -321,6 +398,7 @@ nav {
       vertical-align: middle;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
   .t-drink-text{
@@ -328,11 +406,19 @@ nav {
     background-color: #fff;
     padding: 36px 66px;
     padding-top: 46px;
-   
     line-height: 2.5;
     
+    @include tablets{
+      padding: 36px 46px;
+      line-height: 2;
+    }
+    @include phones{
+      width: 90%;
+      line-height: 1.7;
+      font-size: 14px;
+    }
     & :first-child{
-      
+      width: fit-content;
       font-size: 32px;
       margin-bottom: 46px;
       text-align: center;
@@ -344,6 +430,12 @@ nav {
       // font-family: "Yusei Magic", sans-serif;
       white-space: nowrap;
       
+      @include tablets{
+        font-size: 25px;
+      }
+      @include phones{
+        font-size: 20px;
+      }
     }
   }
 }
@@ -351,41 +443,58 @@ nav {
 // ! 分類3
 
 .fruitTeaBox{
-  
-  // clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
-  padding-top: 56px;
-  padding-bottom: 56px;  
+  padding-top: 86px;
   position: relative;
+  @include phones{
+    padding-top: 56px;
+    padding-bottom: 46px;
+  }
   .t-drink-illust2{
     width: 110px;
-    height: 139px;
     position: absolute;
     bottom: -15%;
     right:15%;
     z-index: 2;
+    @include phones{
+      width: 80px;
+    }
+    img{
+      width: 100%;
+      object-fit: contain;
+    }
+    @include phones{
+      
+    }
     img{
       vertical-align: middle;
       width: 100%;
       height: 100%;
-      
+      object-fit: cover;
     }
   }
-    .title{
+  .title{
       position: relative;
-      top: 24px;
-      left: 24px;
+      left: -24px;
       z-index: 2;
       width: fit-content;
       background-color: #fff;
-      color: #E49119;
-      color: #c8794e;
-      padding:12px 24px;
+      color: #666;
+      padding:12px 34px;
       font-size: 22px;
       text-align: center;
-      // transform: translate(24px,24px);
+      border-radius: 45px;
+     @include tablets{
+      left: 15%;
+      @include phones{
+        font-size: 18px;
+      }
+     }
       & :last-child{
         font-size: 16px;
         color: #333;
+        @include phones{
+          font-size: 14px;
+        }
       }
       &::before{
         position: absolute;
@@ -396,64 +505,131 @@ nav {
         color: #edad4e;
       }
     }
-    .fruitTea-Bg{
-      position: relative;
-      width: 80%;
-      
-      img{
-        vertical-align: middle;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
-      .content{
-        width: 50%;
-        position: absolute;
-        top: 40%;
-        right: -20%;
-        
-        background-color:rgba(255, 255, 255, 0.8);
-        line-height: 1.8;
-        letter-spacing: .1rem;
-        padding: 46px;
-        
-      }
-    }
+  
     
+}
+.fruitTea-Bg{
+  display: flex;
+  justify-content: space-between;
+  
+  .left{
+    width: 62%;
+    @include phones{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    img{
+      vertical-align: middle;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transform: translateY(-5%);
+      border: 5px solid #fff;
+    }
+    .content{
+      width: 65%;
+      background-color:rgba(255, 255, 255, 0.8);
+      line-height: 1.8;
+      letter-spacing: .1rem;
+      padding: 68px 40px;
+      transform: translate(82%, -82%);
+      @include tablets{
+        width: 80%;
+        transform: translate(70%, -32%);
+      }
+      @include phones{
+        transform: translate(0);
+        width: 100%;
+        padding: 46px 30px;
+        font-size: 14px;
+      }
+  }
+}
+  .right{
+    width: 26%;
+    border: 5px solid #fff;
+    align-self: center;
+    @include tablets{
+      align-self: flex-start;
+    }
+    @include phones{
+      display: none;
+    }
+    img{
+      vertical-align: middle;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+
 }
 // ! 分類4
 .fruitTea2{
   background-color: #D6CC99;
   clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
-  padding-top: 126px;
-  padding-bottom: 200px;
+  padding-top: 136px;
+  padding-bottom: 230px;
+  @include phones{
+    padding-bottom: 120px;
+  }
   .fruitTea2Box{
     display: flex;
     position: relative;
-
+    
     
     .fruit-pic{
       width: 33%;
+      @include phones{
+        align-self: center;
+        border: 3px solid #fff;
+      }
       img{
         vertical-align: middle;
         width: 100%;
-        height: auto;
-        object-fit: contain;
+        object-fit: cover;
       }
     }
     .fruit-text{
       width: 40%;
+      display: flex;
+      flex-direction: column;
       background-color: #fff;
       line-height: 2;
-      letter-spacing: .1rem;
-      
+      letter-spacing: 1.5px;
       padding: 36px 44px;
+      text-align: justify;
+      @include tablets{
+        width: 58%;
+        letter-spacing:normal;
+        justify-content: center;
+        @include phones{
+          width: 67%;
+          line-height: 1.5;
+          font-size: 14px;
+          padding:36px 24px;
+        }
+      }
+      p + p{
+        margin-top: 24px;
+      }
     }
     .fruit-pic-r{
       position: absolute;
-      bottom: -10%;
-      right: 15%;
+      bottom: -20%;
+      right: 17%;
       width: 35%;
+      @include tablets{
+        bottom: -35%;
+      }
+      @include phones{
+        
+        display: none;
+      }
       &::before{
         content: "";
         position: absolute;
@@ -480,80 +656,51 @@ nav {
 
 
 
-// 上質茶葉
-
-.sub-title2 h2{
-  text-align: center;
-  font-size: 28px;
-  font-family: 'Kaisei Opti', serif;
-  color:#556B2F;
-  padding-top: 76px;
-  background-color: #fff;
-}
-.leaf-icon1{
-  display: flex;
-  justify-content: space-evenly;
-  padding: 68px 20px;
-  p{
-    font-family: 'Kaisei Opti', serif;
-    text-align: center;
-  }
-  img {
-    animation: rotation 5s infinite linear;
-  }
-}
-
-/* leaf icon */
-@keyframes rotation {
-  from {transform: rotate(0deg);}
-  to { transform: rotate(359deg);}
-}
 
 
 
 
-.item-text 
-.item-text 
-.milk-tea h4{
-  color: #ba8655;
+// .item-text 
+// .item-text 
+// .milk-tea h4{
+//   color: #ba8655;
   
-}
-.mango h4{
- color: #e4b963;
+// }
+// .mango h4{
+//  color: #e4b963;
 
   
-}
-.jasmine h4{
-  color: #666;
-  border-bottom:8px solid  #e4b963;
-  line-height: 1;
-}
+// }
+// .jasmine h4{
+//   color: #666;
+//   border-bottom:8px solid  #e4b963;
+//   line-height: 1;
+// }
 
 
 
-.item-pic-top img ,.item-pic-top-bottom img{
-  width: 100%;
-  height: auto;
-  display: block;
+// .item-pic-top img ,.item-pic-top-bottom img{
+//   width: 100%;
+//   height: auto;
+//   display: block;
   
-}
+// }
 
-.bg-mango{
-  background-color: #fff9c3;
+// .bg-mango{
+//   background-color: #fff9c3;
   
-}
-.bg-jasmine{
-  /* background-color: #ece9e3; */
-  background-image: url(images/bg-gray.jpg);
-  padding: 70px 0;
-}
-.bg-brown{
-  background-color: #AC6239;
-}
+// }
+// .bg-jasmine{
+//   /* background-color: #ece9e3; */
+//   background-image: url(images/bg-gray.jpg);
+//   padding: 70px 0;
+// }
+// .bg-brown{
+//   background-color: #AC6239;
+// }
 .home-footer {
-  background-color: #aca57d;
-  
-  color: #ffffff;
+  background-color: #E4DEBE;;
+  color: #5c5049;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
@@ -564,12 +711,13 @@ nav {
     font-size: 30px;
     li+li{
       margin-left: 24px;
+      
     }
     a{
-      color: #ffffff;
+      color: #5c5049;
       &:hover{
         // text-decoration: underline;
-        color: #e9d6b1;
+        color: #AC6239;
         
       }
     }
@@ -584,123 +732,3 @@ nav {
 
 
 
-// @media(max-width: 992px){
-  
-//   .main {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     padding-right: 15px;
-//     padding-left: 15px;
-//     padding-top: 0;
-//     padding-bottom: 60px;
-  
-//   }
-//   .main-pic{
-//     width: 70%;
-//   }
-//   .main-pic img{
-//     border-radius: 25px;
-
-//   }
-
-//   .main-content{
-//     padding-bottom: 50px;
-//     width: 100%;
-//     order: -1;
-//   }
-//   .main-content p+p{
-//     margin-top: 20px;
-//   }
-
-//   .teaIcon{
-//     margin-bottom: 32px;
-//     margin-top: 32px;
-//   }
-  
-//   .item-text{
-//     padding: 36px;
-    
-//   }
-//   .item-text h4{
-//     font-size: 28px;
-   
-//   }
-//   .tea-production {
-//     padding-top: 100px;
-//     padding-bottom: 100px;
-    
-    
-//   }
-
-// }
-
-@media (max-width: 767px){
-  
-  .title h1{
-    text-align: center;
-    margin-right: 0;
-    
-  }
-  
-  .nav ul {
-    display: flex;
-    justify-content: center;
-  }
-  
-  
-  
-  .tea-production {
-    padding-top: 60px;
-    padding-bottom: 20px;
-  }
-  
-  .tea-production-process{
-    flex-wrap: wrap;
-    
-  }
-  .method{
-    width: 90%;
-    margin-bottom: 40px;
-  }
-  .sub-title h2{
-    font-size: 18px;
-    padding: 5px 0;
-  }
-  .teaIcon{
-    margin-bottom: 28px;
-    margin-top: 28px;
-  }
-  
-  .item-text{
-    width:80%;
-    padding: 36px;
-    margin-bottom: 30px;
-    order: -1;
-    
-  }
-  .item-text p{
-    padding: 28px;
-  }
-
-  .popular-items-a{
-    justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    
-  }
-  .popular-items-b{
-    justify-content: center;
-    padding-bottom: 20px;
-  }
-  .item-pic-top,.item-pic-bottom{
-    width: 40%;
-    
-  }
-  .bg-gray,.bg-jasmine {
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
-  
-
-}

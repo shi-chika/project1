@@ -26,15 +26,35 @@
     
 </head>
 <body class="home-body">
-    <header class="home-header"><h1>CHA CHA TEA</h1></header>
-    <nav class="nav">
-      <ul>
-        <li><a href="tea.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
+    <header class="common-header"><h1>CHA CHA TEA</h1></header>
+    <nav class="common-nav">
+      <ul class="pc-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Menu</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="mailto:test@yoursite.com" target="_blank">Q&A</a></li>
+        <li><a href="qa.html" >Q&A</a></li>
+        <!-- <li><a href="mailto:test@yoursite.com" target="_blank">Q&A</a></li> -->
       </ul>
+        <!-- 漢堡選單 -->
+        <div class="hamburger-btn" >
+          <span class="bar top"></span>
+          <span class="bar middle"></span>
+          <span class="bar down"></span>
+        </div>
+        
+        <div class="ham-list">
+          <ul class="ham-list-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Menu</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="qa.html" >Q&A</a></li>
+          </ul>   
+        </div>
+
+        <div class="hamburger-bg"></div>
+      
     </nav>
+
     <main class="main">
       <div class="main-pic"><img src="images/cha01.jpeg" alt="tea">
       </div>
@@ -48,14 +68,17 @@
       </div>
 
     </main>
-    <div class="sub-title2"><h2>上質な茶葉</h2></div>
-    <div class="leaf-icon1 container">
-      <div><img src="images/icon7.png" width="60px" height="60px" alt=""></div>
-      
-      <p  data-aos="fade-up">お茶の製造過程においても細部への配慮と創造性を重視しています。 <br>これにより、お客様に最高品質とサービスを提供することができます。 <br>心躍るお茶の旅を共に楽しみたいと思います。</p>
-      
-      <div><img src="images/icon7.png" width="60px" height="60px" alt=""></div>
+    <div class="leaf-group">
+      <div class="sub-title2"><h2>上質な茶葉</h2></div>
+      <div class="leaf-text container">
+        <div class="leaf-icon" ><img src="images/icon7.png" width="60px" height="60px" alt=""></div>
+        
+        <p  data-aos="fade-up">お茶の製造過程においても細部への配慮と創造性を重視しています。 <br>これにより、お客様に最高品質とサービスを提供することができます。 <br>心躍るお茶の旅を共に楽しみたいと思います。</p>
+        
+        <div class="leaf-icon"><img src="images/icon7.png" width="60px" height="60px" alt=""></div>
+      </div>
     </div>
+    
     
     <section class="tea-production ">
       <div class="tea-production-process container">
@@ -110,8 +133,14 @@
             <div class="t-drink-illust2"><img src="/images/t-drink-010.png" alt=""></div>
             <div class="title"><p>人気商品の一つ </p><p>フルーツ系ドリンク</p></div>
             <div class="fruitTea-Bg">
-              <img src="/images/t-drink-03.webp" alt="">
-              <p class="content">お茶にジュースやフルーツを入れたフルーツティーが人気です。フルーツが安くて美味しい台湾ならではのドリンクです。季節のフルーツを使って、夏はマンゴー、冬はいちごなどシーズン限定もかなり多いです。</p>
+              <div class="left">
+                <img src="/images/t-drink-03.webp" alt="">
+                <p class="content">お茶にジュースやフルーツを入れたフルーツティーが人気です。フルーツが安くて美味しい台湾ならではのドリンクです。季節のフルーツを使って、夏はマンゴー、冬はいちごなどシーズン限定もかなり多いです。</p>
+              </div>
+             <div class="right">
+              <img src="/images/t-drink-11.webp" alt="">
+             </div>
+              
             </div>
           </div>
         </section>
@@ -120,8 +149,10 @@
         <div class="container fruitTea2Box">
           
           <div class="fruit-pic"> <img src="/images/t-drink-04.jpeg" alt=""></div> 
-          <div class="fruit-text"><p>よく使われるフルーツはパッションフルーツ、リンゴ、パイナップル、オレンジなど、フルーツの盛り合わせのような飲み物です。<br><br> 果物の美味しさがぎゅっと詰まっています。自然な甘酸っぱさとお茶を合わせて、さっぱりした風味でとても美味しいです。</p></div>
+          <div class="fruit-text"><p>よく使われるフルーツはパッションフルーツ、リンゴ、パイナップル、オレンジなど、フルーツの盛り合わせのような飲み物です。</p>
+            <p>果物の美味しさがぎゅっと詰まっています。自然な甘酸っぱさとお茶を合わせて、さっぱりした風味でとても美味しいです。</p></div>
           <div class="fruit-pic-r"><img src="/images/t-drink-05.jpeg" alt=""></div>
+          
         </div>
        </section>
     
@@ -138,9 +169,6 @@
         <p>Copyright © 2024 Cha Cha Tea All Rights Reserved.</p>
       </div>
       
-      
-      
-    
     </footer>
 
 
@@ -155,6 +183,6 @@
         duration:2000,
       });
     </script>
-
+ <script src="page.js"></script>
 </body>
 </html>

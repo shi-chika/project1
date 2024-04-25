@@ -10,8 +10,8 @@
     <link rel="shortcut icon" href="images/icon01.png">
     <link rel="bookmark" href="images/icon01.png">
     <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
     
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,19 +21,33 @@
      <script src="https://kit.fontawesome.com/2b34f8a7fa.js" crossorigin="anonymous"></script>
       <!-- css link -->
     <link rel="stylesheet" href="css/all.css">
-
-    
 </head>
 <body>
-    
-    <nav class="product-nav">
-      <ul>
-        <li><a href="tea.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
+    <nav class="product-header">
+      <ul class="product-pc-nav" >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Menu</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="#">Q&A</a></li>
+        <li><a href="qa.html">Q&A</a></li>
       </ul>
       <h1>CHA CHA TEA</h1>
+       <!-- 漢堡選單 -->
+       <div class="hamburger-btn product-btn" >
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar down"></span>
+      </div>
+      
+      <div class="ham-list">
+        <ul class="ham-list-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Menu</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="qa.html" >Q&A</a></li>
+        </ul>   
+      </div>
+
+      <div class="hamburger-bg"></div>
     </nav>
     
     <div class="sub-title3" ><h3>人気TOP3</h3></div>
@@ -175,6 +189,7 @@
         duration:2000,
       });
     </script>
+    <script src="page.js"></script>
 
 </body>
 </html>

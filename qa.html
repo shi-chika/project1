@@ -16,7 +16,7 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kaisei+Opti&family=Krona+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&family=Murecho:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP&family=Slackside+One&family=Yusei+Magic&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">      
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kaisei+Opti&family=Krona+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=M+PLUS+1p&family=M+PLUS+Rounded+1c&family=Mochiy+Pop+One&family=Murecho:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP&family=Slackside+One&family=Yusei+Magic&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">     
      <!-- icons -->
      <script src="https://kit.fontawesome.com/2b34f8a7fa.js" crossorigin="anonymous"></script>
       <!-- css link -->
@@ -25,13 +25,71 @@
     
 </head>
 <body>
+  <header class="common-header"><h1>CHA CHA TEA</h1></header>
+  <nav class="common-nav">
+    <ul class="pc-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Menu</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="qa.html">Q&A</a></li>
+    </ul>
+     <!-- 漢堡選單 -->
+     <div class="hamburger-btn" >
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar down"></span>
+    </div>
     
+    <div class="ham-list">
+      <ul class="ham-list-ul">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Menu</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="qa.html" >Q&A</a></li>
+      </ul>   
+    </div>
+
+    <div class="hamburger-bg"></div>
+  </nav>
+
+  <div class="qa-BC">
+    <div class="qa-container">
+      <div class="qa-group">
+        <p>Q&A</p>
+        <ul>
+          <li>
+            <div class='question'>メニューにはどのような種類のドリンクがありますか？</div>
+            <div class='answerClose'>当店のメニューにはフルーツティー、ストレートティーなど、幅広い種類のドリンクがございます。詳細はメニューページをご覧ください。</div>
+          </li>
+          <li>
+            <div class='question'>甘さや氷の量は調整できますか？</div>
+            <div class='answerClose'>お客様のお好みに合わせてカスタマイズいただけます。</div>
+          </li>
+          <li>
+            <div class='question'>支払い方法は何が利用できますか？</div>
+            <div class='answerClose'>支払い方法としては現金、クレジットカード、電子マネーなどを利用できます。</div>
+          </li>
+          <li>
+            <div class='question'>営業時間は何時から何時までですか？</div>
+            <div class='answerClose'> 営業時間は店舗ごとに異なりますので、ご来店前に店舗情報をご確認ください。</div>
+          </li>
+          <li>
+            <div class='question'>イベントやキャンペーン情報はどこで確認できますか？</div>
+            <div class='answerClose'>当店のイベントやキャンペーン情報は公式ウェブサイトやSNSなどでお知らせしています。
+            </div>
+          </li>
+        </ul>
+      </div>    
+    </div>
+    
+  </div>
+  
 
     <script>
       AOS.init({
         duration:2000,
       });
     </script>
-
+    <script src="qa.js"></script>
 </body>
 </html>

@@ -1,15 +1,14 @@
 
-.pb-96{
-  padding-bottom: 96px;
-}
-.product-nav {
+.product-header {
   display: flex;
   justify-content: space-between;
   border-bottom:1px solid #494946;
-  background-color:#efebe2fb;
   background-color: #e1dacc;
-  // box-shadow: 0px 2px 5px #ccc;
+  box-shadow: 0px 2px 5px #ccc;
   position: relative;
+  @include phones{
+    justify-content: flex-end;
+  }
   &::after{
     content: "";
     position: absolute;
@@ -25,10 +24,18 @@
     text-align: right;
     margin-right: 80px;
     font-size: 30px;
+    @include phones{
+      padding-bottom: 16px;
+      margin-right: 16px;
+
+    }
   }
-  ul {
-    display: flex;
-    padding: 20px 20px;
+}
+.product-pc-nav{
+  display: flex;
+  padding: 20px 20px;
+  @include phones{
+    display: none;
   }
   li{
     margin-right: 26px;
@@ -92,8 +99,10 @@
 }
 .popular-items-group{
     background-color: #F1EDE4;
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding: 96px 56px;
+    @include phones{
+      padding: 66px 26px;
+    }
 }
 .milkTeaBox{
     position: relative;
@@ -107,7 +116,10 @@
         writing-mode: vertical-rl;
         font-size: 66px;
         font-family: "Chonburi", serif;
-        
+        line-height: 1;
+        @include phones{
+          font-size: 42px;
+        }
     }
     
 }
@@ -123,6 +135,10 @@
       writing-mode: vertical-rl;
       font-size: 66px;
       font-family: "Chonburi", serif;
+      line-height: 1;
+      @include phones{
+        font-size: 42px;
+      }
   }
 }
 .jasmineTeaBox{
@@ -137,43 +153,63 @@
       writing-mode: vertical-rl;
       font-size: 66px;
       font-family: "Chonburi", serif;
-
+      line-height: 1;
+      @include phones{
+        font-size: 42px;
+      }
   }
   
 }
 .popularItem{
     display: flex;
     justify-content: space-between;
-    // border: red 1px solid;
-    img{
-        width: 100%;
-        height: 100%;
-        vertical-align: middle;
-        object-fit: cover;
+    @include phones{
+      flex-direction: column;
+      align-items: center;
     }
+    
     .item-pic-top{
         width: 30%;
+        // @include phones{
+        //   width: 70%;
+        // }
+        img{
+          width: 100%;
+          vertical-align: middle;
+          object-fit: cover;
+      }
     }
     .item-pic-bottom{
-        width: 25%;   
+        width: 25%;  
+        img{
+          width: 100%;
+          vertical-align: middle;
+          object-fit: cover;
+      }
+        
     }
     .item-text{
         width: 40%;
         align-self: center;
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 56px 32px;
+        padding: 56px 26px;
+        @include tablets{
+          padding: 8px;
+          padding-top: 24px;
+        }
         h4{
             font-family: "M PLUS Rounded 1c", sans-serif;
             font-family: "Yusei Magic", sans-serif;
-            // font-family: "Murecho", sans-serif;
-            // font-family: "Slackside One", cursive;
+           
             font-size: 28px;
-            // background-color: #F1EDE4;
             padding: 8px 14px;
-            
+            @include tablets{
+              font-size: 22px;
+            }
         }
         p{
             font-family: 'Zen Kaku Gothic New', sans-serif;
@@ -181,43 +217,72 @@
             padding: 44px 52px;
             line-height: 1.7;
             letter-spacing: 0.1rem;
+            @include tablets{
+              padding: 30px;
+              letter-spacing: normal;
+            }
           }
           
     }
 }
 .milk-tea{
+  // border: 1px blue solid;
   .item-pic-top{
       width: 35%;
       position: relative;
+      @include phones{
+        width: 80%;
+      }
       &::after{
         content:"01";
         position: absolute;
-        top: -40px;;
-        right: -36px;
-        color:rgba(196, 177, 149, 0.7);
+        top: -9%;;
+        right: -8%;
+        // color:rgba(196, 177, 149, 0.7);
         color: rgba(219,204,149,0.7);
         line-height: 1;
-        font-size: 76px;
+        font-size: 96px;
         font-family: "Chonburi", serif;
-  
+        @include tablets{
+          top: -15%;
+        }
+        @include phones{
+          font-size: 66px;
+          top: -10%;
+        }
+       
     }
     img{
         border: 10px solid #fff;
+        @include tablets{
+          border: 6px solid #fff;
+        }
       }   
   }
   .item-pic-bottom{
       width: 25%;
       align-self: center;
+      @include phones{
+        width: 80%;
+      }
       img{
-          border: 5px solid #fff;
           border: 10px solid #e3d1bb;
           transform: translate(-15%,28%);
+          @include tablets{
+            border: 6px solid #fff;
+          }
+          @include phones{
+            transform: translate(15%,-8%);
+          }
+         
       }
   }
   .item-text{
       background-color: #e3d1bb;
+      @include phones{
+        width: 95%;
+      }
       h4{
-        color: #CA9942;
         color: #bb764c;
        
       }
@@ -225,19 +290,31 @@
 }
 .mango-tea{
   flex-direction: row-reverse;
+  @include phones{
+    flex-direction: column;
+  }
   .item-pic-top{
       width: 35%;
       position: relative;
+      @include phones{
+        width: 80%;
+      }
       &::after{
         content:"02";
         position: absolute;
-        top: -60px;
-        left: -46px;
-        color:rgba(196, 177, 149, 0.7);
+        top: -12%;
+        left: -10%;
         color: rgba(219,204,149,0.7);
-        font-size: 76px;
+        font-size: 96px;
         font-family: "Chonburi", serif;
-  
+        @include tablets{
+          top: -20%;
+        }
+        @include phones{
+          font-size: 66px;
+          top: -15%;
+
+        }
      }
       img{
         border: 6px solid #fff;
@@ -248,16 +325,22 @@
       width: 25%;
       align-self: center;
       position: relative;
+      @include phones{
+        width: 80%;
+      }
       img{
           border: 6px solid #fff;
           transform: translate(15%,35%);
+          @include phones{
+            transform: translate(15%,-8%);
+          }
       }
   }
   .item-text{
-    
-    background-color:#edda99fc;
     background-color:#efe2b5;
-    // order: -1;
+    @include phones{
+      width: 95%;
+    }
       h4{
         color: #bb541f;
         color: #E48F45;
@@ -268,21 +351,32 @@
   }
 }
 .jasmine-tea{
+
   justify-content: center;
   // border: red 1px solid;
   .item-pic-top{
       width: 35%;
       position: relative;
+      @include phones{
+        width: 80%;
+      }
       &::after{
         content:"03";
         position: absolute;
-        top: -40px;
-        right: -36px;
-        color:rgba(196, 177, 149, 0.7);
+        top: -9%;
+        right: -10%;
+
         color: rgba(219,204,149,0.7);
-        font-size: 76px;
+        font-size: 96px;
         font-family: "Chonburi", serif;
-  
+        @include tablets{
+          top: -15%;
+        }
+        @include phones{
+          top: -8%;
+          font-size: 66px;
+          
+        }
      }
       img{
         border: 6px solid #D9D4CB;
@@ -294,17 +388,23 @@
       width: 25%;
       order: 1;
       align-self: start;
+      @include phones{
+        width: 80%;
+      }
       img{
         border: 6px solid #fff;
       }
   }
   .item-text{
-    
+  
       background-color: #acaca5;
       background-color: #D9D4CB;
       position: relative;
       left: 36px;
       top: 40px;
+      @include phones{
+        width: 95%;
+      }
       h4{
         // color: #CA9942;
         // color: #bb764c;
@@ -317,6 +417,7 @@
 /* product 分頁 */
 .product-menu{
     background-color: #f6eee0;
+    background-color: #EEE6C9;
     padding-bottom: 96px;
   }
 
@@ -333,6 +434,7 @@
     width: 36px;
     height: 2px;
     background-color:#b8422d;
+    background-color: #d2a263;
     transform: translateX(-50%);
   }
   h5{
@@ -341,6 +443,7 @@
     // font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 400;
     color: #b8422d;
+    color: #d2a263;
   }
   p{
     font-size: 20px;
@@ -351,23 +454,38 @@
   }
 }
   
-  
+  // ! 目錄
   // 各商品
   .product-category{
     display: flex;
     justify-content: space-around;
-    padding:100px 60px;
     
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+    @include phones{
+      flex-direction: column;
+      align-items: center;
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
   }
   
   .tea-item{
-    width: 28%;
+    width: 26%;
     background-color: #fff;
     box-shadow: 0px 2px 6px #00000029;
     display: flex;
     flex-direction: column;
     transform: translateY(0px);
     transition: all .3s;
+    @include tablets{
+      width: 30%;
+    }
+    @include phones{
+      width: 80%;
+      margin-bottom: 36px;
+    }
     &:hover{
       transform: translateY(-30px);
     }
@@ -376,11 +494,13 @@
       background-color: #251919;
     }
 
-    .tea-item-pic{
-      object-fit: cover;
+    .tea-item-pic {
+      
       img{
+        object-fit: cover;
         width: 100%;
-        display: block;
+        vertical-align: middle;
+        
       }
     }
     .tea-item-text{
@@ -389,16 +509,22 @@
       justify-content: center;
       text-align: center;
       padding: 20px;
-      font-size: 12px;
+      font-size: 15px;
       font-family: 'Noto Sans JP', sans-serif;
       color: #333;
       flex-grow: 1 ;
+      @include phones{
+        font-size: 14px;
+      }
 
       h6{
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 500;
-        padding-bottom: 8px;
+        padding-bottom: 16px;
         font-weight: 600;
+        @include phones{
+          font-size: 16px;
+        }
       }
       
     }
