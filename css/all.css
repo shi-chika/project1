@@ -1563,7 +1563,7 @@ html {
 
 /* news 分頁 */
 .news-banner {
-  background-image: "../images/cha80.jpeg";
+  background-image: url(../images/cha80.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
