@@ -328,7 +328,8 @@ html {
   }
 }
 .tea-production {
-  background-image: url(images/pexels-photo-03.webp);
+  background-color: #f6edd0;
+  background-image: url("images/pexels-photo-03.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1562,7 +1563,7 @@ html {
 
 /* news 分頁 */
 .news-banner {
-  background-image: url(images/cha80.jpeg);
+  background-image: url("/images/cha80.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
