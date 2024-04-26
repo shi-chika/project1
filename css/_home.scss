@@ -1,4 +1,6 @@
-
+// * {
+//   outline: 1px solid red;
+// }
 .home-body{
   color: #333;
   font-size: 16px;
@@ -18,7 +20,7 @@
 
 .main {
   display: flex;
-  height: 85vh;
+  height: 95vh;
   color: #333;
   
   background-color: #E4DEBE;
@@ -37,6 +39,9 @@
     width: 52%;
     @include tablets{
         width: 60%;
+      }
+      @include phones{
+        width: 90%;
       }
     img{
         vertical-align: middle;
