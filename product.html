@@ -10,8 +10,8 @@
     <link rel="shortcut icon" href="images/icon01.png">
     <link rel="bookmark" href="images/icon01.png">
     <!-- AOS -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,8 +54,8 @@
 
     <section class="popular-items-group milkTeaBox">
       <div class=" container milk-tea popularItem">
-        <div class="item-pic-top" data-aos="fade-down-right"><img src="images/cha30.jpeg" alt="milk tea"></div>
-        <div class="item-pic-bottom" data-aos="fade-down-right" ><img src="images/cha31.jpeg" alt="milk tea"></div>
+        <div class="item-pic-top" data-aos="flip-right"><img src="images/cha30.jpeg" alt="milk tea"></div>
+        <div class="item-pic-bottom" data-aos="flip-right" ><img src="images/cha31.jpeg" alt="milk tea"></div>
         <div class="item-text " >
           <h4>タピオカミルクティー</h4>
           <p>タピオカを加えた人気のあるミルクティーです。 タピオカの食感と甘さがミルクティーと相まって、 楽しい飲み物になります。</p>
@@ -67,8 +67,8 @@
     </section>
     <section class="popular-items-group mangoTeaBox ">
       <div class="container mango-tea popularItem">
-        <div class="item-pic-top" data-aos="fade-down-left"><img src="images/cha53.jpeg"  alt="mango tea"></div>
-        <div class="item-pic-bottom" data-aos="fade-down-left"><img src="images/cha39.jpeg"  alt="mango tea"></div>
+        <div class="item-pic-top" data-aos="flip-right"><img src="images/cha53.jpeg"  alt="mango tea"></div>
+        <div class="item-pic-bottom" data-aos="flip-right"><img src="images/cha39.jpeg"  alt="mango tea"></div>
         <div class="item-text " >
           <h4>マンゴーティ―</h4>
           <p>新鮮なマンゴーの風味が豊かなフルーツティーです。 甘くてジューシーなマンゴーの味わいが特徴で、 爽やかなアイスティーとしてもお楽しみいただけます。</p>
@@ -78,10 +78,10 @@
     
     <section class="popular-items-group jasmineTeaBox ">
       <div class=" container jasmine-tea popularItem">
-        <div class="item-pic-top gray-border" data-aos="fade-down-right" ><img src="images/cha51.jpeg" alt="Jasmine tea"></div>
+        <div class="item-pic-top gray-border" data-aos="flip-right" ><img src="images/cha51.jpeg" alt="Jasmine tea"></div>
         <div class="item-pic-bottom gray-border" ><img src="images/cha50.webp"  alt="mango tea"></div>
         
-        <div class="item-text" >
+        <div data-aos="flip-right" class="item-text" >
             <h4>ジャスミンティー</h4>
             <p>茶葉とジャスミンの花を組み合わせて製造されるお茶で、
               芳醇な香りと優雅な味わいが特徴です。
@@ -98,7 +98,7 @@
         <h5>Fruit Tea</h5>
       </div>
       
-      <div class="product-category container">
+      <div data-aos="fade-left" class="product-category container">
         <div class="tea-item">
           <div class="tea-item-pic">
             <img src="images/cha54.webp"  width="300px" height="400px"  alt="mango tea">
@@ -137,7 +137,7 @@
       </div>
 
       
-      <div class="product-category container">
+      <div data-aos="fade-right" class="product-category container">
         <div class="tea-item">
           <div class="tea-item-pic">
             <img src="images/cha21.jpeg"  width="300px" height="400px"  alt="">
@@ -186,7 +186,9 @@
 
     <script>
       AOS.init({
-        duration:2000,
+        duration:1300,
+        offset: 200,
+        delay: 400,
       });
     </script>
     <script src="page.js"></script>

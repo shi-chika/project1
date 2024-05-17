@@ -1,6 +1,10 @@
 // * {
 //   outline: 1px solid red;
 // }
+
+// section{
+//   
+// }
 .home-body{
   color: #333;
   font-size: 16px;
@@ -237,7 +241,7 @@
 // new
 .home-background-color{
   background-color: #EEE6C9;
-  
+  overflow: hidden;
 }
 // ! 分類1
 .taiwan-drink{
@@ -345,77 +349,85 @@
   padding-top: 200px;
   padding-bottom: 200px;
   position: relative;
-  &::before{
-    content: "\5C 豊かな食感が楽しい \2F";
-    position: absolute;
-    left: 22%;
-    bottom: 14%;
-    font-size: 24px;
-    color: #AC6239;
-    @include phones{
-      
-      bottom: 8%;
-      font-size: 20px;
-    }
-    
-  }
+ 
 
 }
 
 .t-drink-box2{
-  // border: red 1px solid;
+  
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  // justify-content: space-around;
 
   @include phones{
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .t-drink-img{
-    width: 30%;
+    width: 45%;
     position: relative;
-    
+    &::before{
+      width: 100%;
+      content: "\5C 豊かな食感が楽しい \2F";
+      position: absolute;
+      left: 70%;
+      top: 10%;
+      font-size: 24px;
+      color: #ffffff;
+     @include tablets{
+      font-size: 20px;
+      top: 5%;
+      left: 50%;
+     }
+     @include phones{
+      font-size:16px;
+      top: 5%;
+      left: 3%;
+     }
+      
+    }
+   
     @include tablets{
-      width: 36%;
+      width: 35%;
       align-self: center;
     }
     @include phones{
+      border: 4px solid #fff;
       width: 70%;
-      margin-bottom: 34px;
+      margin-bottom: 36px;
     }
-    &::before{
-      content: "";
-      position: absolute;
-      left: -7%;
-      top: -4%;
-      width: 100%;
-      height: 100%;
-      background-color:#E49119;
-      background-color: #AC6239;
-    }
+    
     img{
-      position: relative;
       vertical-align: middle;
       width: 100%;
-      height: 100%;
+      // height: 100%;
       object-fit: cover;
     }
   }
   .t-drink-text{
-    width: 50%;
+    width: 55%;
     background-color: #fff;
-    padding: 36px 66px;
-    padding-top: 46px;
-    line-height: 2.5;
+    padding: 54px 66px;
     
+    line-height: 2;
+    align-self: center;
+    position: relative;
+    top: 36px;
+    right: 7%;
+  
     @include tablets{
-      padding: 36px 46px;
-      line-height: 2;
+      top: 76px;
+      padding: 46px 46px;
+      line-height: 1.8;
+      width: 60%;
+      // right: 52px;
     }
     @include phones{
       width: 90%;
-      line-height: 1.7;
       font-size: 14px;
+      right: 0;
+      top: 0;
     }
     & :first-child{
       width: fit-content;
@@ -441,213 +453,317 @@
 }
 
 // ! 分類3
-
-.fruitTeaBox{
-  padding-top: 86px;
-  position: relative;
+.t-drink-box2-down{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  
   @include phones{
-    padding-top: 56px;
-    padding-bottom: 46px;
+    flex-direction: column;
+    align-items: center;
   }
+  .t-drink-img{
+    width: 42%;
+   
+    @include tablets{
+      width: 35%;
+      align-self: center;
+    }
+    @include phones{
+      border: 4px solid #fff;
+      width: 70%;
+      margin-bottom: 34px;
+    }
+    
+    img{
+      position: relative;
+      vertical-align: middle;
+      width: 100%;
+      // height: 100%;
+      object-fit: cover;
+    }
+  }
+  .t-drink-text{
+    width: 50%;
+    background-color: #fff;
+    padding: 70px;
+    
+    line-height: 2;
+    align-self: center;
+    position: relative;
+    left: 86px;
+    
+    @include tablets{
+      width: 60%;
+      padding: 46px;
+      line-height: 1.8;
+    }
+    @include phones{
+      width: 90%;
+      line-height: 1.7;
+      font-size: 14px;
+      left: 0;
+      padding: 46px 30px;
+    }
+    & :first-child{
+      width: fit-content;
+      font-size: 32px;
+      margin-bottom: 46px;
+      text-align: center;
+     
+      color: #43382e;
+      background: linear-gradient(transparent 70%, #ffe187 0);
+      line-height: 1.2;
+      font-family: "M PLUS Rounded 1c", sans-serif;
+      // font-family: "Yusei Magic", sans-serif;
+      white-space: nowrap;
+      
+      @include tablets{
+        font-size: 25px;
+      }
+      @include phones{
+        font-size: 20px;
+      }
+    }
+  }
+
+  
+}
+.taiwan-drink3{
+  padding-top: 36px;
+  padding-bottom: 36px;
+  position: relative;
+
   .t-drink-illust2{
     width: 110px;
     position: absolute;
-    bottom: -15%;
+    bottom: -20%;
     right:15%;
     z-index: 2;
+    
     @include phones{
       width: 80px;
     }
     img{
       width: 100%;
       object-fit: contain;
-    }
-    @include phones{
-      
-    }
-    img{
       vertical-align: middle;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
+    
   }
-  .title{
-      position: relative;
-      left: -24px;
-      z-index: 2;
-      width: fit-content;
-      background-color: #fff;
-      color: #666;
-      padding:12px 34px;
-      font-size: 22px;
-      text-align: center;
-      border-radius: 45px;
-     @include tablets{
-      left: 15%;
-      @include phones{
-        font-size: 18px;
-      }
-     }
-      & :last-child{
-        font-size: 16px;
-        color: #333;
-        @include phones{
-          font-size: 14px;
-        }
-      }
-      &::before{
-        position: absolute;
-        top: -16px;
-        left: 40%;
-        content: "\f005";
-        font: var(--fa-font-solid);
-        color: #edad4e;
-      }
-    }
+}
+
+
+
+// ! 分類3
+
+// .fruitTeaBox{
+//   padding-top: 86px;
+//   position: relative;
+//   @include phones{
+//     padding-top: 56px;
+//     padding-bottom: 46px;
+//   }
+//   .t-drink-illust2{
+//     width: 110px;
+//     position: absolute;
+//     bottom: -15%;
+//     right:15%;
+//     z-index: 2;
+//     @include phones{
+//       width: 80px;
+//     }
+//     img{
+//       width: 100%;
+//       object-fit: contain;
+//     }
+//     @include phones{
+      
+//     }
+//     img{
+//       vertical-align: middle;
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+//   .title{
+//       position: relative;
+//       left: -24px;
+//       z-index: 2;
+//       width: fit-content;
+//       background-color: #fff;
+//       color: #666;
+//       padding:12px 34px;
+//       font-size: 22px;
+//       text-align: center;
+//       border-radius: 45px;
+//      @include tablets{
+//       left: 15%;
+//       @include phones{
+//         font-size: 18px;
+//       }
+//      }
+//       & :last-child{
+//         font-size: 16px;
+//         color: #333;
+//         @include phones{
+//           font-size: 14px;
+//         }
+//       }
+//       &::before{
+//         position: absolute;
+//         top: -16px;
+//         left: 40%;
+//         content: "\f005";
+//         font: var(--fa-font-solid);
+//         color: #edad4e;
+//       }
+//     }
   
     
-}
-.fruitTea-Bg{
-  display: flex;
-  justify-content: space-between;
+// }
+// .fruitTea-Bg{
+//   display: flex;
+//   justify-content: space-between;
   
-  .left{
-    width: 62%;
-    @include phones{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+//   .left{
+//     width: 62%;
+//     @include phones{
+//       width: 100%;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
       
-    }
-    img{
-      vertical-align: middle;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transform: translateY(-5%);
-      border: 5px solid #fff;
-    }
-    .content{
-      width: 65%;
-      background-color:rgba(255, 255, 255, 0.8);
-      line-height: 1.8;
-      letter-spacing: .1rem;
-      padding: 68px 40px;
-      transform: translate(82%, -82%);
-      @include tablets{
-        width: 80%;
-        transform: translate(70%, -32%);
-      }
-      @include phones{
-        transform: translate(0);
-        width: 100%;
-        padding: 46px 30px;
-        font-size: 14px;
-      }
-  }
-}
-  .right{
-    width: 26%;
-    border: 5px solid #fff;
-    align-self: center;
-    @include tablets{
-      align-self: flex-start;
-    }
-    @include phones{
-      display: none;
-    }
-    img{
-      vertical-align: middle;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  }
+//     }
+//     img{
+//       vertical-align: middle;
+//       width: 100%;
+//       height: auto;
+//       object-fit: cover;
+//       transform: translateY(-5%);
+//       border: 5px solid #fff;
+//     }
+//     .content{
+//       width: 65%;
+//       background-color:rgba(255, 255, 255, 0.8);
+//       background-color: #fff;
+//       line-height: 1.8;
+//       letter-spacing: .1rem;
+//       padding: 68px 40px;
+//       transform: translate(82%, -100%);
+//       @include tablets{
+//         width: 70%;
+//         padding: 40px 32px;
+//         margin-top: 36px;
+//       }
+//       @include phones{
+//         transform: translate(0);
+//         width: 100%;
+//         padding: 46px 30px;
+//         font-size: 14px;
+//       }
+//   }
+// }
+//   .right{
+//     width: 30%;
+//     border: 5px solid #fff;
+//     align-self: center;
+//     // @include tablets{
+//     //   align-self: flex-start;
+//     // }
+//     @include phones{
+//       display: none;
+//     }
+//     img{
+//       vertical-align: middle;
+//       width: 100%;
+//       height: auto;
+//       object-fit: cover;
+//     }
+//   }
 
 
-}
+// }
+
+
 // ! 分類4
 .fruitTea2{
   background-color: #D6CC99;
   clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
-  padding-top: 136px;
-  padding-bottom: 230px;
+  padding-top: 190px;
+  padding-bottom: 140px;
   @include phones{
     padding-bottom: 120px;
   }
-  .fruitTea2Box{
+  .fruitTea2-top{
     display: flex;
-    position: relative;
-    
-    
-    .fruit-pic{
-      width: 33%;
-      @include phones{
-        align-self: center;
-        border: 3px solid #fff;
-      }
-      img{
-        vertical-align: middle;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-    .fruit-text{
-      width: 40%;
-      display: flex;
+    @include phones{
       flex-direction: column;
-      background-color: #fff;
-      line-height: 2;
-      letter-spacing: 1.5px;
-      padding: 36px 44px;
-      text-align: justify;
-      @include tablets{
-        width: 58%;
-        letter-spacing:normal;
-        justify-content: center;
-        @include phones{
-          width: 67%;
-          line-height: 1.5;
-          font-size: 14px;
-          padding:36px 24px;
-        }
-      }
-      p + p{
-        margin-top: 24px;
-      }
+      align-items: center;
     }
-    .fruit-pic-r{
-      position: absolute;
-      bottom: -20%;
-      right: 17%;
-      width: 35%;
-      @include tablets{
-        bottom: -35%;
-      }
-      @include phones{
-        
-        display: none;
-      }
-      &::before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #E49119;
-        background-color: #AC6239;
-        right: -5%;
-        bottom: -7%;
-      }
-      img{
-        position: relative;
-        vertical-align: middle;
-        width: 100%;
-        object-fit: cover;
-      }
+    
+  }
+  .fruitTea2-down{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 66px;
+    @include tablets {
+      margin-top: 126px;
+    }
+    @include phones{
+      flex-direction: column;
+      align-items: center;
+      margin-top: 64px;
     }
   }
+  .fruit-pic{
+    width: 40%;
+    @include tablets{
+      width: 45%;
+    }
+    @include phones{
+      width: 90%;
+      border: 3px solid #fff;
+    }
+    img{
+      vertical-align: middle;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .fruit-text{
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 42px 52px;
+    text-align: justify;
+    @include tablets{
+      width: 55%;
+      
+    }
+    @include phones{
+      width: 90%;
+      
+      font-size: 14px;
+      padding:36px 24px;
+    }  
+    
+    p + p{
+      margin-top: 24px;
+    }
+  }
+  .translateY{
+    @include tablets{
+      transform: translateY(30%);
+    }
+    @include phones{
+      transform: translateY(0);
+    }
+  }
+  
   
   
 }

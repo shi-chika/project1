@@ -496,6 +496,7 @@ html {
 }
 .home-background-color {
   background-color: #EEE6C9;
+  overflow: hidden;
 }
 
 .taiwan-drink {
@@ -615,83 +616,88 @@ html {
   padding-bottom: 200px;
   position: relative;
 }
-.taiwan-drink2::before {
-  content: "\\豊かな食感が楽しい /";
-  position: absolute;
-  left: 22%;
-  bottom: 14%;
-  font-size: 24px;
-  color: #AC6239;
-}
-@media (max-width: 767px) {
-  .taiwan-drink2::before {
-    bottom: 8%;
-    font-size: 20px;
-  }
-}
 
 .t-drink-box2 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 @media (max-width: 767px) {
   .t-drink-box2 {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 }
 .t-drink-box2 .t-drink-img {
-  width: 30%;
+  width: 45%;
   position: relative;
+}
+.t-drink-box2 .t-drink-img::before {
+  width: 100%;
+  content: "\\豊かな食感が楽しい /";
+  position: absolute;
+  left: 70%;
+  top: 10%;
+  font-size: 24px;
+  color: #ffffff;
+}
+@media (max-width: 992px) {
+  .t-drink-box2 .t-drink-img::before {
+    font-size: 20px;
+    top: 5%;
+    left: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .t-drink-box2 .t-drink-img::before {
+    font-size: 16px;
+    top: 5%;
+    left: 3%;
+  }
 }
 @media (max-width: 992px) {
   .t-drink-box2 .t-drink-img {
-    width: 36%;
+    width: 35%;
     align-self: center;
   }
 }
 @media (max-width: 767px) {
   .t-drink-box2 .t-drink-img {
+    border: 4px solid #fff;
     width: 70%;
-    margin-bottom: 34px;
+    margin-bottom: 36px;
   }
 }
-.t-drink-box2 .t-drink-img::before {
-  content: "";
-  position: absolute;
-  left: -7%;
-  top: -4%;
-  width: 100%;
-  height: 100%;
-  background-color: #E49119;
-  background-color: #AC6239;
-}
 .t-drink-box2 .t-drink-img img {
-  position: relative;
   vertical-align: middle;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .t-drink-box2 .t-drink-text {
-  width: 50%;
+  width: 55%;
   background-color: #fff;
-  padding: 36px 66px;
-  padding-top: 46px;
-  line-height: 2.5;
+  padding: 54px 66px;
+  line-height: 2;
+  align-self: center;
+  position: relative;
+  top: 36px;
+  right: 7%;
 }
 @media (max-width: 992px) {
   .t-drink-box2 .t-drink-text {
-    padding: 36px 46px;
-    line-height: 2;
+    top: 76px;
+    padding: 46px 46px;
+    line-height: 1.8;
+    width: 60%;
   }
 }
 @media (max-width: 767px) {
   .t-drink-box2 .t-drink-text {
     width: 90%;
-    line-height: 1.7;
     font-size: 14px;
+    right: 0;
+    top: 0;
   }
 }
 .t-drink-box2 .t-drink-text :first-child {
@@ -717,241 +723,203 @@ html {
   }
 }
 
-.fruitTeaBox {
-  padding-top: 86px;
-  position: relative;
-}
-@media (max-width: 767px) {
-  .fruitTeaBox {
-    padding-top: 56px;
-    padding-bottom: 46px;
-  }
-}
-.fruitTeaBox .t-drink-illust2 {
-  width: 110px;
-  position: absolute;
-  bottom: -15%;
-  right: 15%;
-  z-index: 2;
-}
-@media (max-width: 767px) {
-  .fruitTeaBox .t-drink-illust2 {
-    width: 80px;
-  }
-}
-.fruitTeaBox .t-drink-illust2 img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.fruitTeaBox .t-drink-illust2 img {
-  vertical-align: middle;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.fruitTeaBox .title {
-  position: relative;
-  left: -24px;
-  z-index: 2;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #fff;
-  color: #666;
-  padding: 12px 34px;
-  font-size: 22px;
-  text-align: center;
-  border-radius: 45px;
-}
-@media (max-width: 992px) {
-  .fruitTeaBox .title {
-    left: 15%;
-  }
-}
-@media (max-width: 992px) and (max-width: 767px) {
-  .fruitTeaBox .title {
-    font-size: 18px;
-  }
-}
-.fruitTeaBox .title :last-child {
-  font-size: 16px;
-  color: #333;
-}
-@media (max-width: 767px) {
-  .fruitTeaBox .title :last-child {
-    font-size: 14px;
-  }
-}
-.fruitTeaBox .title::before {
-  position: absolute;
-  top: -16px;
-  left: 40%;
-  content: "\f005";
-  font: var(--fa-font-solid);
-  color: #edad4e;
-}
-
-.fruitTea-Bg {
+.t-drink-box2-down {
   display: flex;
-  justify-content: space-between;
-}
-.fruitTea-Bg .left {
-  width: 62%;
+  flex-direction: row-reverse;
+  justify-content: space-around;
 }
 @media (max-width: 767px) {
-  .fruitTea-Bg .left {
-    width: 100%;
-    display: flex;
+  .t-drink-box2-down {
     flex-direction: column;
     align-items: center;
   }
 }
-.fruitTea-Bg .left img {
-  vertical-align: middle;
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transform: translateY(-5%);
-  border: 5px solid #fff;
-}
-.fruitTea-Bg .left .content {
-  width: 65%;
-  background-color: rgba(255, 255, 255, 0.8);
-  line-height: 1.8;
-  letter-spacing: 0.1rem;
-  padding: 68px 40px;
-  transform: translate(82%, -82%);
+.t-drink-box2-down .t-drink-img {
+  width: 42%;
 }
 @media (max-width: 992px) {
-  .fruitTea-Bg .left .content {
-    width: 80%;
-    transform: translate(70%, -32%);
+  .t-drink-box2-down .t-drink-img {
+    width: 35%;
+    align-self: center;
   }
 }
 @media (max-width: 767px) {
-  .fruitTea-Bg .left .content {
-    transform: translate(0);
-    width: 100%;
-    padding: 46px 30px;
-    font-size: 14px;
+  .t-drink-box2-down .t-drink-img {
+    border: 4px solid #fff;
+    width: 70%;
+    margin-bottom: 34px;
   }
 }
-.fruitTea-Bg .right {
-  width: 26%;
-  border: 5px solid #fff;
+.t-drink-box2-down .t-drink-img img {
+  position: relative;
+  vertical-align: middle;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.t-drink-box2-down .t-drink-text {
+  width: 50%;
+  background-color: #fff;
+  padding: 70px;
+  line-height: 2;
   align-self: center;
+  position: relative;
+  left: 86px;
 }
 @media (max-width: 992px) {
-  .fruitTea-Bg .right {
-    align-self: flex-start;
+  .t-drink-box2-down .t-drink-text {
+    width: 60%;
+    padding: 46px;
+    line-height: 1.8;
   }
 }
 @media (max-width: 767px) {
-  .fruitTea-Bg .right {
-    display: none;
+  .t-drink-box2-down .t-drink-text {
+    width: 90%;
+    line-height: 1.7;
+    font-size: 14px;
+    left: 0;
+    padding: 46px 30px;
   }
 }
-.fruitTea-Bg .right img {
-  vertical-align: middle;
+.t-drink-box2-down .t-drink-text :first-child {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 32px;
+  margin-bottom: 46px;
+  text-align: center;
+  color: #43382e;
+  background: linear-gradient(transparent 70%, #ffe187 0);
+  line-height: 1.2;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  white-space: nowrap;
+}
+@media (max-width: 992px) {
+  .t-drink-box2-down .t-drink-text :first-child {
+    font-size: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .t-drink-box2-down .t-drink-text :first-child {
+    font-size: 20px;
+  }
+}
+
+.taiwan-drink3 {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  position: relative;
+}
+.taiwan-drink3 .t-drink-illust2 {
+  width: 110px;
+  position: absolute;
+  bottom: -20%;
+  right: 15%;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .taiwan-drink3 .t-drink-illust2 {
+    width: 80px;
+  }
+}
+.taiwan-drink3 .t-drink-illust2 img {
   width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
 }
 
 .fruitTea2 {
   background-color: #D6CC99;
   -webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
-  padding-top: 136px;
-  padding-bottom: 230px;
+  padding-top: 190px;
+  padding-bottom: 140px;
 }
 @media (max-width: 767px) {
   .fruitTea2 {
     padding-bottom: 120px;
   }
 }
-.fruitTea2 .fruitTea2Box {
+.fruitTea2 .fruitTea2-top {
   display: flex;
-  position: relative;
-}
-.fruitTea2 .fruitTea2Box .fruit-pic {
-  width: 33%;
 }
 @media (max-width: 767px) {
-  .fruitTea2 .fruitTea2Box .fruit-pic {
-    align-self: center;
+  .fruitTea2 .fruitTea2-top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.fruitTea2 .fruitTea2-down {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 66px;
+}
+@media (max-width: 992px) {
+  .fruitTea2 .fruitTea2-down {
+    margin-top: 126px;
+  }
+}
+@media (max-width: 767px) {
+  .fruitTea2 .fruitTea2-down {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+  }
+}
+.fruitTea2 .fruit-pic {
+  width: 40%;
+}
+@media (max-width: 992px) {
+  .fruitTea2 .fruit-pic {
+    width: 45%;
+  }
+}
+@media (max-width: 767px) {
+  .fruitTea2 .fruit-pic {
+    width: 90%;
     border: 3px solid #fff;
   }
 }
-.fruitTea2 .fruitTea2Box .fruit-pic img {
+.fruitTea2 .fruit-pic img {
   vertical-align: middle;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.fruitTea2 .fruitTea2Box .fruit-text {
-  width: 40%;
+.fruitTea2 .fruit-text {
+  width: 46%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #fff;
-  line-height: 2;
-  letter-spacing: 1.5px;
-  padding: 36px 44px;
+  padding: 42px 52px;
   text-align: justify;
 }
 @media (max-width: 992px) {
-  .fruitTea2 .fruitTea2Box .fruit-text {
-    width: 58%;
-    letter-spacing: normal;
-    justify-content: center;
+  .fruitTea2 .fruit-text {
+    width: 55%;
   }
 }
-@media (max-width: 992px) and (max-width: 767px) {
-  .fruitTea2 .fruitTea2Box .fruit-text {
-    width: 67%;
-    line-height: 1.5;
+@media (max-width: 767px) {
+  .fruitTea2 .fruit-text {
+    width: 90%;
     font-size: 14px;
     padding: 36px 24px;
   }
 }
-.fruitTea2 .fruitTea2Box .fruit-text p + p {
+.fruitTea2 .fruit-text p + p {
   margin-top: 24px;
 }
-.fruitTea2 .fruitTea2Box .fruit-pic-r {
-  position: absolute;
-  bottom: -20%;
-  right: 17%;
-  width: 35%;
-}
 @media (max-width: 992px) {
-  .fruitTea2 .fruitTea2Box .fruit-pic-r {
-    bottom: -35%;
+  .fruitTea2 .translateY {
+    transform: translateY(30%);
   }
 }
 @media (max-width: 767px) {
-  .fruitTea2 .fruitTea2Box .fruit-pic-r {
-    display: none;
+  .fruitTea2 .translateY {
+    transform: translateY(0);
   }
-}
-.fruitTea2 .fruitTea2Box .fruit-pic-r::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #E49119;
-  background-color: #AC6239;
-  right: -5%;
-  bottom: -7%;
-}
-.fruitTea2 .fruitTea2Box .fruit-pic-r img {
-  position: relative;
-  vertical-align: middle;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .home-footer {
@@ -978,6 +946,10 @@ html {
 .home-footer p {
   font-size: 14px;
   margin-top: 12px;
+}
+
+.popular-items-group, .product-menu {
+  overflow: hidden;
 }
 
 .product-header {
@@ -1601,7 +1573,6 @@ html {
   justify-content: center;
   text-align: center;
   padding-top: 36px;
-  opacity: 0.9;
 }
 .cut p {
   font-weight: 500;
@@ -1626,7 +1597,9 @@ html {
   background-image: url("../images/cha80.jpeg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   z-index: -1;
+  opacity: 0.9;
 }
 
 .news-text {
