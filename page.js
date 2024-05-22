@@ -13,5 +13,7 @@ hamBtn.addEventListener('click', ()=>{
 
     hamList.classList.toggle('show-list');
     hamBg.classList.toggle('show-bg');
+    
+    document.body.classList.toggle('noscroll');
 });
 
